@@ -1,20 +1,22 @@
+img { /* Makes images unselectable */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+} 
+
 html {
   height: 100%;
 }
 
 body {
+  /* background-image: linear-gradient(to left, rgba(44, 44, 44, 0.9), rgba(255, 17, 17, 0.2)), url(./ARAMPython-main/portrait/Ahri_portrait.png); */
+  background-repeat: repeat-y repeat-x;
   min-height: 100vh;
-  margin: 50px 50px;
-  padding: 0px 0px;  
-}
-
-.portrait-background {
-  height: 1000px;
-  display: flex;
-  overflow: auto;
-  background-image: url(01_portrait.png),url(01_portrait.png),url(01_portrait.png),url(01_portrait.png),url(01_portrait.png),url(01_portrait.png),url(01_portrait.png),url(01_portrait.png),url(01_portrait.png),url(01_portrait.png),
-      linear-gradient(to left, rgba(44, 44, 44, 0.9), rgba(255, 17, 17, 0.2));
-  background-blend-mode: color;
+  margin: 0px;
+  padding: 0px;  
 }
 
 .SearchText {
@@ -30,7 +32,21 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+#SearchValue {
+  background-color: transparent;
+  height: 30px;
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+}
+
 #output {
-  margin: 30px;
-  height: 100px;
+  cursor: pointer;
+}
+
+.ReloadBackground {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
 }

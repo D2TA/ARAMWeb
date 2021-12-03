@@ -15,20 +15,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap" rel="stylesheet">     
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Comic+Neue:wght@300&family=Libre+Barcode+39+Text&family=Open+Sans:wght@300&family=Oswald:wght@200&family=Press+Start+2P&family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">    
+<!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">    
+<!-- Script -->
     <script src="./script.js"></script>
   </head>
-  <body onload="">
-
+  <body onload="onLoadRun()">
+    <script>
+      // Attaching the event listener function to window's resize event
+      window.addEventListener("resize", function(){onLoadRun();}, true);
+    </script>
     
     <div class= "portrait-background">
       <div class="SearchText">
         Search a Champion
         <form oninput="output.value = SearchURL(SearchValue.value)">
-          <input type="text" name="SearchValue" id="SearchValue" autocomplete="off">
+          <input type="text" name="SearchValue" id="SearchValue" autocomplete="off" placeholder="Search...">
         </form>
         <div id= "output">
-          
         </div>
+      </div>
+      <div class = "ReloadBackground" onclick="getRandomChampion()">
+        <span class="material-icons-outlined" style = "font-size: 50px;">cached</span>
       </div>
     </div>
 
