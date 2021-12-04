@@ -30,7 +30,8 @@
     <div class= "portrait-background">
       <div class="SearchText">
         Search a Champion
-        <form oninput="output.value = SearchURL(SearchValue.value)">
+        <br>
+        <form oninput="output.value = SearchURL(SearchValue.value)" onkeydown="return event.key != 'Enter';">
           <input type="text" name="SearchValue" id="SearchValue" autocomplete="off" placeholder="Search...">
         </form>
         <div id= "output">
